@@ -32,6 +32,8 @@
 ### 2. 통계분석 진행
 
 - 수송량을 구하기 위해 독립변수와 종속변수 간의 관계를 분석하기 위해 상관분석 및 회귀분석 진행 후, 유속과 수송량간의 회귀식 산출
+  -![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/ddb265a7-725d-4b61-b69e-d0f91feae455)
+ 
   - y=8.834922816434565x - 0.1593419390106443
   - R2(결정계수) : 0.42005482803748473
 
@@ -39,8 +41,14 @@
 
 - 2030년의 수송량을 예측하기 위해 머신러닝모델(XGBRegressor)을 이용하여 2030년의 독립변수 예측
     - 유속을 예측하기 위한 독립변수 수의 부족함을 느껴, 유속 관련 데이터를 추가수집 후 XGBRegressor 모델을 사용하여 독립변수의 2030년의 값을 예측 후, 이어서 진행할 유속예측 모델의 독립변수로 사용
+    - ![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/dfca2efc-8802-43fc-aaaf-c9ec4b6f3fc4)
+    - ![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/70cfe4ef-9ef3-4ffb-b044-af743f0964a0)
+    - ![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/485e8c32-9507-4809-87b4-117758497e89)
+
 - 8개의 머신러닝 모델과 딥러닝(LSTM)을 사용하여 학습 진행
     - LSTM모델과 Random forest 모델의 성능이 가장 우수하게 나왔으며 여러가지 환경을 고려해본 결과, RMSE가 0.010104로 가장 낮게나온 Random forest를 최종모델로 선정
+    - ![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/b95314b0-6ce6-4d7f-ac8c-d57fe83c48b2)
+
 - Random forest를 이용하여 2030년의 유속을 예측한 뒤, 이를 앞서 구한 회귀식에 대입하여 2030년의 남향 수송량을 예측
   - ![image](https://github.com/DOYOON510/Deep-Seawater-prediction/assets/129147977/b6be17aa-0e05-4f14-96b2-db2a7ea69992)
   - 2030년 남향 수송량 : - 2979.209393557897 Sv
